@@ -1,8 +1,15 @@
 import Navbar from "../componets/Navbar";
+import Footer from "../componets/Footer";
 import { ChatProvider } from "../componets/ChatContext";
 import ChatBot from "../componets/ChatBot";
 import ChatBubble from "../componets/ChatBubble";
 import "./globals.css";
+
+export const metadata = {
+  alternates: {
+    canonical: "https://iskra.com.co/",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -11,12 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>
+      <body className="bg-black text-white">
         <ChatProvider>
           <Navbar />
           {children}
+          <Footer />
 
-          {/* ESTOS DOS SON CLAVE */}
+          {/* Chat global */}
           <ChatBubble />
           <ChatBot />
         </ChatProvider>

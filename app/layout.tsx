@@ -4,6 +4,7 @@ import { ChatProvider } from "../componets/ChatContext";
 import ChatBot from "../componets/ChatBot";
 import ChatBubble from "../componets/ChatBubble";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /* ========================
    Metadata + SEO + Schema
@@ -69,6 +70,7 @@ export default function RootLayout({
         <ChatProvider>
           <Navbar />
           {children}
+          <SpeedInsights />
           <Footer />
           {/* Chat global */}
           <ChatBubble />

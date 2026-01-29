@@ -61,7 +61,7 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/tuLinkedin",
               ],
               description:
-                "Iskra es una agencia de publicidad especializada en marketing de influencia, posicionamiento de marca y estrategias digitales creativas.",
+                "Iskra es una agencia de publicidad especializada en marketing de influencia, posicionamiento de marca y estrategias digitales creativas",
             }),
           }}
         />

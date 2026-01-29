@@ -76,7 +76,7 @@ export default function TeamSection() {
             viewport={{ once: true }}
           >
             <Image
-              src="/images/ceña4.png"
+              src="/images/Ceña4.png"
               alt="Founder Iskra"
               width={420}
               height={520}

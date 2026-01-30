@@ -186,6 +186,36 @@ export default function Navbar() {
               Inicio
             </p>
 
+            <p
+              onClick={() => {
+                handleNavClick("por-que-elegirnos");
+                setMenuOpen(false);
+              }}
+              className="cursor-pointer hover:opacity-80"
+            >
+              ¿Por qué elegirnos?
+            </p>
+
+            <p
+              onClick={() => {
+                handleNavClick("nuestro-equipo");
+                setMenuOpen(false);
+              }}
+              className="cursor-pointer hover:opacity-80"
+            >
+              Equipo
+            </p>
+
+            <p
+              onClick={() => {
+                handleNavClick("nuestro-metodo");
+                setMenuOpen(false);
+              }}
+              className="cursor-pointer hover:opacity-80"
+            >
+              Nuestro método
+            </p>
+
             <Link
               href="/servicios"
               onClick={() => setMenuOpen(false)}
@@ -209,36 +239,6 @@ export default function Navbar() {
             >
               Casos Reales
             </Link>
-
-            <p
-              onClick={() => {
-                handleNavClick("por-que-elegirnos");
-                setMenuOpen(false);
-              }}
-              className="cursor-pointer hover:opacity-80"
-            >
-              ¿Por qué elegirnos?
-            </p>
-
-            <p
-              onClick={() => {
-                handleNavClick("nuestro-metodo");
-                setMenuOpen(false);
-              }}
-              className="cursor-pointer hover:opacity-80"
-            >
-              Nuestro método
-            </p>
-
-            <p
-              onClick={() => {
-                handleNavClick("nuestro-equipo");
-                setMenuOpen(false);
-              }}
-              className="cursor-pointer hover:opacity-80"
-            >
-              Equipo
-            </p>
           </div>
         </div>
       )}

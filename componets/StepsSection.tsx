@@ -66,7 +66,7 @@ export default function StepsSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Línea central */}
-          <div className="absolute left-1/2 top-0 h-full w-px bg-neutral-700 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-neutral-700 -translate-x-1/2" />
 
           <div className="flex flex-col gap-24">
             {steps.map((step, index) => {

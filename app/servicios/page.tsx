@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   motion,
@@ -35,6 +35,14 @@ const services = [
 export default function ServiciosPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   /* =======================
      SCROLL PARALLAX HERO
@@ -44,12 +52,20 @@ export default function ServiciosPage() {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "85%"]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const imageY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? ["0%", "0%"] : ["0%", "60%"],
+  );
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? [1, 1] : [1, 1.1],
+  );
   const imageBlur = useTransform(
     scrollYProgress,
     [0, 1],
-    ["blur(0px)", "blur(6px)"],
+    isMobile ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(4px)"],
   );
 
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
@@ -66,7 +82,12 @@ export default function ServiciosPage() {
       >
         {/* Imagen */}
         <motion.div
-          style={{ y: imageY, scale: imageScale, filter: imageBlur }}
+          style={{
+            y: imageY,
+            scale: imageScale,
+            filter: imageBlur,
+            willChange: "transform, filter",
+          }}
           className="absolute inset-0"
         >
           <Image

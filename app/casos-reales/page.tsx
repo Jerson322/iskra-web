@@ -1,19 +1,11 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function ColaboracionesPage() {
+export default function CasosRealesPage() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   /* PARALLAX */
   const { scrollYProgress } = useScroll({
@@ -21,16 +13,9 @@ export default function ColaboracionesPage() {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? ["0%", "0%"] : ["0%", "50%"],
-  );
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
-  const images = Array.from({ length: 21 }).map(
-    (_, i) => `/images/colab-${i + 1}.PNG`,
-  );
 
   return (
     <main className="bg-black text-white overflow-hidden">
@@ -41,18 +26,12 @@ export default function ColaboracionesPage() {
         ref={heroRef}
         className="relative h-[120vh] w-full overflow-hidden"
       >
-        {/* Imagen */}
+        {/* Imagen placeholder - puedes cambiar por una imagen real */}
         <motion.div
           style={{ y: imageY, willChange: "transform" }}
-          className="absolute inset-0"
+          className="absolute inset-0 bg-gradient-to-b from-purple-900 to-black"
         >
-          <Image
-            src="/images/colaboraciones.png" // imagen de influencers
-            alt="Colaboraciones Iskra"
-            fill
-            priority
-            className="object-cover"
-          />
+          {/* Placeholder background */}
         </motion.div>
 
         {/* Overlay */}
@@ -68,14 +47,14 @@ export default function ColaboracionesPage() {
           style={{ opacity: titleOpacity, y: titleY }}
           className="relative z-20 h-full flex items-center justify-center px-6"
         >
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-center">
-            Colaboraciones
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-center">
+            Casos Reales
           </h1>
         </motion.div>
       </section>
 
       {/* =======================
-          CONTENIDO
+          CONTENIDO PLACEHOLDER
       ======================= */}
       <section className="max-w-6xl mx-auto px-6 py-32">
         <motion.p
@@ -85,27 +64,23 @@ export default function ColaboracionesPage() {
           viewport={{ once: true }}
           className="text-white/70 max-w-2xl text-lg leading-relaxed"
         >
-          Talento con el que hemos desarrollado campañas, estrategias y procesos
-          de crecimiento dentro del ecosistema digital.
+          Próximamente: Casos de éxito reales de nuestras campañas y
+          colaboraciones.
         </motion.p>
 
-        <div className="mt-24 columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
-          {images.map((src, i) => (
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Placeholder cards */}
+          {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="relative overflow-hidden rounded-2xl"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative overflow-hidden rounded-2xl bg-gray-800 p-6"
             >
-              <Image
-                src={src}
-                alt={`Colaboración ${i + 1}`}
-                width={600}
-                height={800}
-                className="w-full h-auto object-cover hover:scale-110 transition-transform duration-700"
-              />
+              <h3 className="text-xl font-semibold mb-2">Caso {i}</h3>
+              <p className="text-white/70">Contenido próximamente.</p>
             </motion.div>
           ))}
         </div>

@@ -93,14 +93,16 @@ export default function Navbar() {
       <nav className="relative z-10 max-w-7xl mx-auto px-6 py-2 flex items-center min-h-[64px]">
         {/* LOGO */}
         <div className="flex-1">
-          <Image
-            src="/images/iskra-logo.png"
-            alt="ISKRA"
-            width={130}
-            height={42}
-            priority
-            className="object-contain"
-          />
+          <Link href="/">
+            <Image
+              src="/images/iskra-logo.png"
+              alt="ISKRA"
+              width={130}
+              height={42}
+              priority
+              className="object-contain cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* MENÚ */}
@@ -119,14 +121,14 @@ export default function Navbar() {
           </li>
 
           <li
-              onClick={() => {
-                handleNavClick("nuestro-equipo");
-                setMenuOpen(false);
-              }}
-              className="cursor-pointer hover:opacity-80"
-            >
-              Equipo
-            </li>
+            onClick={() => {
+              handleNavClick("nuestro-equipo");
+              setMenuOpen(false);
+            }}
+            className="cursor-pointer hover:opacity-80"
+          >
+            Equipo
+          </li>
 
           <li
             onClick={() => handleNavClick("nuestro-metodo")}
@@ -141,6 +143,10 @@ export default function Navbar() {
 
           <li className="hover:text-white transition">
             <Link href="/colaboraciones">Colaboraciones</Link>
+          </li>
+
+          <li className="hover:text-white transition">
+            <Link href="/casos-reales">Casos Reales</Link>
           </li>
         </ul>
         {/* ☰ BOTÓN MOBILE */}
@@ -194,6 +200,14 @@ export default function Navbar() {
               className="block hover:opacity-80"
             >
               Colaboraciones
+            </Link>
+
+            <Link
+              href="/casos-reales"
+              onClick={() => setMenuOpen(false)}
+              className="block hover:opacity-80"
+            >
+              Casos Reales
             </Link>
 
             <p

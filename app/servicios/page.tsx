@@ -16,6 +16,11 @@ const services = [
       "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real.",
   },
   {
+    title: " Estategia creativa",
+    description:
+      "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio.",
+  },
+  {
     title: "Selección y Curaduría de Influencers",
     description:
       "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles.",
@@ -23,7 +28,7 @@ const services = [
   {
     title: "Acompañamiento para Nuevos Influencers",
     description:
-      "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional.",
+      "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboracioneses para que entren al mercado de forma profesional.",
   },
   {
     title: "Consultoría para Creadores Junior",

@@ -142,11 +142,7 @@ export default function Navbar() {
           </li>
 
           <li className="hover:text-white transition">
-            <Link href="/colaboraciones">Colaboraciones</Link>
-          </li>
-
-          <li className="hover:text-white transition">
-            <Link href="/casos-reales">Casos Reales</Link>
+            <Link href="/colaboraciones">Casos reales</Link>
           </li>
         </ul>
         {/* ☰ BOTÓN MOBILE */}
@@ -229,15 +225,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="block hover:opacity-80"
             >
-              Colaboraciones
-            </Link>
-
-            <Link
-              href="/casos-reales"
-              onClick={() => setMenuOpen(false)}
-              className="block hover:opacity-80"
-            >
-              Casos Reales
+              Casos reales
             </Link>
           </div>
         </div>

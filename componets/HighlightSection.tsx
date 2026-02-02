@@ -1,12 +1,11 @@
 import ScrollReveal from "./ScrollReveal";
 import Image from "next/image";
 import backgroundImage from "@/public/images/steps-bg.jpg"; // Fondo borroso
-import mainImage from "@/public/images/publi.png"; // Imagen principal encima
+import mainImage from "@/public/images/publi-modified.png"; // Imagen principal encima
 
 export default function HighlightOverlaySection() {
   return (
     <section className="relative w-full flex items-center justify-center overflow-hidden">
-      
       {/* Imagen de fondo borrosa */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -20,7 +19,6 @@ export default function HighlightOverlaySection() {
 
       {/* Contenedor central */}
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-6 py-24">
-
         {/* Imagen principal encima */}
         <div className="flex-shrink-0 w-full lg:w-1/2 relative">
           <Image
@@ -41,13 +39,14 @@ export default function HighlightOverlaySection() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-sm">
-              ISKRA es la agencia estratégica de publicidad e influencia que convierte la presencia digital en posicionamiento real, mediante campañas con creadores basadas en criterio, negociación profesional y ejecución impecable.
+              ISKRA es la agencia estratégica de publicidad e influencia que
+              convierte la presencia digital en posicionamiento real, mediante
+              campañas con creadores basadas en criterio, negociación
+              profesional y ejecución impecable.
             </p>
           </ScrollReveal>
         </div>
-
       </div>
     </section>
   );
 }
-

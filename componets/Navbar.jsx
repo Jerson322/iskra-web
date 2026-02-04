@@ -106,7 +106,13 @@ export default function Navbar() {
         </div>
 
         {/* MENÚ */}
-        <ul className="hidden md:flex gap-12 text-white/90 text-sm tracking-wide">
+        <ul
+          className="
+    hidden md:flex gap-12
+    text-white font-semibold text-[15px] tracking-wide
+    drop-shadow-[0_3px_8px_rgba(0,0,0,1)]
+  "
+        >
           <li
             onClick={() => handleNavClick("inicio")}
             className="cursor-pointer hover:text-white transition"

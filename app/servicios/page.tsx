@@ -28,7 +28,7 @@ const services = [
   {
     title: "Acompañamiento para Nuevos Influencers",
     description:
-      "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboracioneses para que entren al mercado de forma profesional.",
+      "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional.",
   },
   {
     title: "Consultoría para Creadores Junior",

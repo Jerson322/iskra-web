@@ -65,7 +65,9 @@ export default function Hero() {
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
 
-      <div className="relative z-10 flex h-full items-center justify-center px-6">
+      <div className="hidden md:flex gap-12
+    text-white font-semibold text-[15px] tracking-wide
+    drop-shadow-[0_3px_8px_rgba(0,0,0,1)] relative z-10 flex h-full items-center justify-center px-6">
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl">
             Agencia de publicidad enfocada en

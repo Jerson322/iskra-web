@@ -1,28 +1,23 @@
-import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 export async function POST(req: Request) {
-  try {
-    const { messages } = await req.json();
-
-    const completion = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages,
-      temperature: 0.6,
-    });
-
-    return NextResponse.json({
-      message: completion.choices[0].message,
-    });
-  } catch (error) {
-    console.error("CHAT ERROR:", error);
-    return NextResponse.json(
-      { error: "Error procesando el mensaje" },
+  if (!process.env.OPENAI_API_KEY) {
+    return new Response(
+      JSON.stringify({ error: "OPENAI_API_KEY no configurada" }),
       { status: 500 }
     );
   }
+
+  const client = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+
+  const { messages } = await req.json();
+
+  const completion = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages,
+  });
+
+  return Response.json(completion.choices[0].message);
 }

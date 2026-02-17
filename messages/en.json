@@ -73,7 +73,24 @@
       {
         "title": "Consulting for Junior Creators",
         "description": "We advise on rates, brand negotiation, organic growth, content optimization and building a sustainable career within the digital ecosystem."
-      }
+      },
+      {
+  "title": "International Services",
+  "description": "Strategic campaigns for brands expanding beyond their local markets."
+},
+{
+  "title": "Influencer management for brands entering LATAM",
+  "description": "Talent sourcing, negotiation and strategic coordination for international brands entering the Latin American market."
+},
+{
+  "title": "Transatlantic campaigns",
+  "description": "Integrated campaigns between Europe and Latin America aligned with cultural context and business objectives."
+},
+{
+  "title": "Hybrid activations Europe–Latin America",
+  "description": "Physical and digital activations connecting audiences across both continents."
+}
+
     ]
   },
   "language": {
@@ -134,30 +151,48 @@
     ]
   },
   "servicesPage": {
-    "title": "Services",
-    "services": [
-      {
-        "title": "Influencer Marketing Strategy",
-        "description": "We design strategies targeted at influencers, content creators and artists, aligned with each brand's commercial objectives, focused on impact, reach and real conversion."
-      },
-      {
-        "title": "Creative Strategy",
-        "description": "We are a company specialized in the development of creative strategies for brands, focused on designing and executing solutions that generate connection, positioning and measurable results. We work with companies of different sizes, accompanying them in the definition and evolution of their communication based on a deep understanding of their identity, objectives and audience. Our approach integrates narrative, content strategy and creative execution, aligning each action with the brand's DNA and the dynamics of the digital ecosystem. We believe in strategically applied creativity as a driver of value, impact and sustainable business growth."
-      },
-      {
-        "title": "Influencer Selection and Curation",
-        "description": "We analyze data, real engagement and brand affinity to select authentic profiles that connect with the right audience and generate measurable results."
-      },
-      {
-        "title": "Support for New Influencers",
-        "description": "We guide new creators in their positioning, content, personal brand and first collaborations to enter the market professionally."
-      },
-      {
-        "title": "Consulting for Junior Creators",
-        "description": "We advise on rates, brand negotiation, organic growth, content optimization and building a sustainable career within the digital ecosystem."
-      }
-    ]
-  },
+  "title": "Services",
+  "nationalTitle": "Services",
+  "internationalTitle": "International Services",
+
+  "national": [
+    {
+      "title": "Influencer Marketing Strategy",
+      "description": "We design strategies aimed at influencers, content creators and artists, aligned with the commercial objectives of each brand, focused on impact, reach and real conversion."
+    },
+    {
+      "title": "Creative Strategy",
+      "description": "We are a company specializing in the development of creative strategies for brands, focused on designing and executing solutions that generate connection, positioning, and measurable results. We work with companies of all sizes, guiding them in defining and evolving their communication based on a deep understanding of their identity, objectives, and audience. Our approach integrates storytelling, content strategy, and creative execution, aligning every action with the brand's DNA and the dynamics of the digital ecosystem. We believe in strategically applied creativity as a driver of value, impact, and sustainable business growth."
+    },
+    {
+      "title": "Influencer Selection and Curation",
+      "description": "We analyze data, real engagement, and brand affinity to select authentic profiles that connect with the right audience and generate measurable results."
+    },
+    {
+      "title": "Support for New Influencers",
+      "description": "We guide new creators in their positioning, content, personal branding, and first collaborations so they can enter the market professionally."
+    },
+    {
+      "title": "Consulting for Junior Creators",
+      "description": "We advise on pricing, brand negotiations, organic growth, content optimization, and building a sustainable career within the digital ecosystem."
+    }
+  ],
+
+  "international": [
+    {
+      "title": "Influencer management for brands entering LATAM",
+      "description": "Talent sourcing and strategic coordination for international brands."
+    },
+    {
+      "title": "Transatlantic campaigns",
+      "description": "Integrated campaigns between Europe and Latin America."
+    },
+    {
+      "title": "Hybrid activations Europe–Latin America",
+      "description": "Physical and digital activations connecting both continents."
+    }
+  ]
+},
   "collaborationsPage": {
     "title": "Real cases",
     "description": "Talent and brands with which we have developed campaigns, strategies and growth processes within the digital ecosystem."

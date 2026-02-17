@@ -73,7 +73,24 @@
       {
         "title": "Consultoría para Creadores Junior",
         "description": "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital."
-      }
+      },
+      {
+  "title": "Servicios Internacionales",
+  "description": "Estrategias y ejecución de campañas para marcas que buscan expandirse más allá de su mercado local."
+},
+{
+  "title": "Gestión de influencers para marcas que quieren entrar a LATAM",
+  "description": "Identificación, negociación y coordinación de talento estratégico para marcas internacionales que buscan posicionarse en el mercado latinoamericano."
+},
+{
+  "title": "Campañas transatlánticas",
+  "description": "Diseño y ejecución de campañas integradas entre Europa y Latinoamérica, alineando mensaje, cultura y objetivos comerciales."
+},
+{
+  "title": "Activaciones híbridas Europa–Latinoamérica",
+  "description": "Experiencias y activaciones que conectan audiencias en ambos continentes combinando presencia física y digital."
+}
+
     ]
   },
   "language": {
@@ -134,30 +151,48 @@
     ]
   },
   "servicesPage": {
-    "title": "Servicios",
-    "services": [
-      {
-        "title": "Estrategia de Influencer Marketing",
-        "description": "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real."
-      },
-      {
-        "title": "Estrategia creativa",
-        "description": "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio."
-      },
-      {
-        "title": "Selección y Curaduría de Influencers",
-        "description": "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles."
-      },
-      {
-        "title": "Acompañamiento para Nuevos Influencers",
-        "description": "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional."
-      },
-      {
-        "title": "Consultoría para Creadores Junior",
-        "description": "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital."
-      }
-    ]
-  },
+  "title": "Servicios",
+  "nationalTitle": "Servicios",
+  "internationalTitle": "Servicios Internacionales",
+
+  "national": [
+    {
+      "title": "Estrategia de Influencer Marketing",
+      "description": "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real."
+    },
+    {
+      "title": "Estrategia creativa",
+      "description": "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio."
+    },
+    {
+      "title": "Selección y Curaduría de Influencers",
+      "description": "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles."
+    },
+    {
+      "title": "Acompañamiento para Nuevos Influencers",
+      "description": "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional."
+    },
+    {
+      "title": "Consultoría para Creadores Junior",
+      "description": "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital."
+    }
+  ],
+
+  "international": [
+    {
+      "title": "Gestión de influencers para marcas que quieren entrar a LATAM",
+      "description": "Identificación, negociación y coordinación estratégica de talento para marcas internacionales."
+    },
+    {
+      "title": "Campañas transatlánticas",
+      "description": "Diseño y ejecución de campañas integradas entre Europa y Latinoamérica."
+    },
+    {
+      "title": "Activaciones híbridas Europa–Latinoamérica",
+      "description": "Experiencias y activaciones que conectan audiencias en ambos continentes."
+    }
+  ]
+},
   "collaborationsPage": {
     "title": "Casos reales",
     "description": "Talento y marcas con las que hemos desarrollado campañas, estrategias y procesos de crecimiento dentro del ecosistema digital."

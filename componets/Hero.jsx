@@ -8,8 +8,8 @@ import { useTranslations } from "next-intl";
    TYPEWRITER COMPONENT
 ========================= */
 function TypewriterText() {
-  const text =
-    "Iskra es una agencia de publicidad y marketing digital especializada en marketing de influencia, construcción de marca y campañas estratégicas con creadores, actores y talentos digitales en Colombia.";
+  const t = useTranslations("hero");
+  const text = t("description");
 
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,7 +38,7 @@ function TypewriterText() {
     }, speed);
 
     return () => clearTimeout(timeout);
-  }, [index, isDeleting]);
+  }, [index, isDeleting, text]);
 
   return (
     <p className="mt-6 text-base md:text-lg text-white/95">

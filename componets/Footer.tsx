@@ -4,11 +4,12 @@ import Image from "next/image";
 import { Instagram } from "lucide-react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("navbar");
 
   const handleNavClick = (id: string) => {
     if (pathname !== "/") {
@@ -40,21 +41,29 @@ export default function Footer() {
           <nav className="flex justify-center">
             <ul className="flex gap-6 text-sm">
               {[
-                { label: "Inicio", target: "inicio", isLink: false },
+                { label: t("home"), target: "inicio", isLink: false },
                 {
-                  label: "¿Por qué elegirnos?",
+                  label: t("whyChooseUs"),
                   target: "por-que-elegirnos",
                   isLink: false,
                 },
-                { label: "Equipo", target: "nuestro-equipo", isLink: false },
                 {
-                  label: "Nuestro método",
+                  label: t("team"),
+                  target: "nuestro-equipo",
+                  isLink: false,
+                },
+                {
+                  label: t("ourMethod"),
                   target: "nuestro-metodo",
                   isLink: false,
                 },
-                { label: "Servicios", href: "/servicios", isLink: true },
                 {
-                  label: "Casos reales",
+                  label: t("services"),
+                  href: "/servicios",
+                  isLink: true,
+                },
+                {
+                  label: t("caseStudies"),
                   href: "/colaboraciones",
                   isLink: true,
                 },
@@ -82,7 +91,7 @@ export default function Footer() {
 
           {/* Redes */}
           <div className="flex flex-col items-center md:items-end gap-4">
-            <span className="text-sm text-neutral-400">Síguenos</span>
+            <span className="text-sm text-neutral-400">{t("followUs")}</span>
             <div className="flex gap-4">
               <a
                 className="footer-icon"
@@ -99,9 +108,7 @@ export default function Footer() {
         <div className="my-8 h-px bg-neutral-800" />
 
         {/* Copyright */}
-        <p className="text-center text-xs text-neutral-500">
-          © 2026 Iskra. Todos los derechos reservados.
-        </p>
+        <p className="text-center text-xs text-neutral-500">{t("copyright")}</p>
       </div>
     </footer>
   );

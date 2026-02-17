@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useChat } from "./ChatContext";
+import { useTranslations } from "next-intl";
 
 /* =========================
    TYPEWRITER COMPONENT
@@ -52,6 +53,7 @@ function TypewriterText() {
 ========================= */
 export default function Hero() {
   const { setOpen } = useChat();
+  const t = useTranslations("hero");
 
   return (
     <section id="inicio" className="relative h-screen w-full overflow-hidden">
@@ -79,10 +81,8 @@ export default function Hero() {
       >
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-            Agencia de publicidad enfocada en
-            <span className="block mt-2">
-              influencia y resultados reales
-            </span>
+            {t("title1")}
+            <span className="block mt-2">{t("title2")}</span>
           </h1>
 
           {/* ✨ TYPEWRITER */}
@@ -97,7 +97,7 @@ export default function Hero() {
             >
               <span className="pointer-events-none absolute inset-0 rounded-full spark-border" />
               <span className="relative z-10 w-full rounded-full bg-black/80 px-8 py-3 text-center text-base sm:text-lg font-semibold tracking-wide text-white transition hover:bg-white hover:text-black">
-                Cotizar
+                {t("quote")}
               </span>
             </button>
 
@@ -108,7 +108,7 @@ export default function Hero() {
             >
               <span className="pointer-events-none absolute inset-0 rounded-full spark-border" />
               <span className="relative z-10 w-full rounded-full bg-black/80 px-8 py-3 text-center text-base sm:text-lg font-semibold tracking-wide text-white transition hover:bg-white hover:text-black">
-                ¿Quieres ser influencer?
+                {t("influencer")}
               </span>
             </button>
           </div>

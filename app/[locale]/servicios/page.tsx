@@ -8,36 +8,16 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-const services = [
-  {
-    title: "Estrategia de Influencer Marketing",
-    description:
-      "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real.",
-  },
-  {
-    title: " Estrategia creativa",
-    description:
-      "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio.",
-  },
-  {
-    title: "Selección y Curaduría de Influencers",
-    description:
-      "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles.",
-  },
-  {
-    title: "Acompañamiento para Nuevos Influencers",
-    description:
-      "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional.",
-  },
-  {
-    title: "Consultoría para Creadores Junior",
-    description:
-      "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital.",
-  },
-];
+interface Service {
+  title: string;
+  description: string;
+}
 
 export default function ServiciosPage() {
+  const t = useTranslations("servicesPage");
+  const services = t.raw("services");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -118,7 +98,7 @@ export default function ServiciosPage() {
           className="relative z-20 h-full flex items-center justify-center px-6"
         >
           <h1 className="text-6xl md:text-7xl font-semibold tracking-tight">
-            Servicios
+            {t("title")}
           </h1>
         </motion.div>
       </section>
@@ -127,7 +107,7 @@ export default function ServiciosPage() {
           SERVICIOS
       ======================= */}
       <section className="max-w-5xl mx-auto px-6 py-32 space-y-12">
-        {services.map((service, i) => (
+        {(services as Service[]).map((service, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 50 }}

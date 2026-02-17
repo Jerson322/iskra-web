@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "Iskra - Advertising Agency and Influencer Marketing",
+    "description": "Iskra is an advertising agency specialized in influencer marketing, brand positioning and creative digital strategies.",
+    "ogTitle": "Iskra - Advertising Agency and Influencer Marketing",
+    "ogDescription": "Iskra is an advertising agency specialized in influencer marketing, brand positioning and creative digital strategies.",
+    "twitterTitle": "Iskra - Advertising Agency and Influencer Marketing",
+    "twitterDescription": "Iskra is an advertising agency specialized in influencer marketing, brand positioning and creative digital strategies."
+  },
+  "navbar": {
+    "home": "Home",
+    "whyChooseUs": "Why choose us?",
+    "team": "Team",
+    "ourMethod": "Our method",
+    "services": "Services",
+    "caseStudies": "Case studies",
+    "quote": "Quote",
+    "followUs": "Follow us",
+    "copyright": "© 2024 Iskra. All rights reserved."
+
+  },
+  "hero": {
+    "title1": "Advertising agency focused on",
+    "title2": "influence and real results",
+    "description": "Iskra is an advertising and digital marketing agency specialized in influencer marketing, brand building and strategic campaigns with creators, actors and digital talents in Colombia.",
+    "quote": "Quote",
+    "influencer": "Want to be an influencer?"
+  },
+  "footer": {
+    "followUs": "Follow us",
+    "copyright": "© 2026 Iskra. All rights reserved."
+  },
+  "strengthSection": {
+    "differential": "Iskra Differential",
+    "title": "Our true strength",
+    "subtitle": "Marketing strategies with carefully selected influencers.",
+    "card1": {
+      "title": "We don't sell influencers",
+      "description": "ISKRA designs strategies with carefully selected influencers."
+    },
+    "card2": {
+      "title": "Strategic criteria",
+      "description": "Our differential: deep analysis, ethics and long-term vision."
+    },
+    "card3": {
+      "title": "Comprehensive strategies",
+      "description": "We connect brands with influencers ethically and sustainably."
+    },
+    "pricing": {
+      "title": "Fair pricing",
+      "description": "We work with transparent rates that take care of both the brand and the creator. We want sustainable relationships where everyone wins: brands receive real value and influencers are fairly recognized for their work. No surprises or hidden costs, everything clear from the start."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "services": [
+      {
+        "title": "Influencer Marketing Strategy",
+        "description": "We design strategies targeted at influencers, content creators and artists, aligned with each brand's commercial objectives, focused on impact, reach and real conversion."
+      },
+      {
+        "title": "Creative Strategy",
+        "description": "We are a company specialized in the development of creative strategies for brands, focused on designing and executing solutions that generate connection, positioning and measurable results. We work with companies of different sizes, accompanying them in the definition and evolution of their communication based on a deep understanding of their identity, objectives and audience. Our approach integrates narrative, content strategy and creative execution, aligning each action with the brand's DNA and the dynamics of the digital ecosystem. We believe in strategically applied creativity as a driver of value, impact and sustainable business growth."
+      },
+      {
+        "title": "Influencer Selection and Curation",
+        "description": "We analyze data, real engagement and brand affinity to select authentic profiles that connect with the right audience and generate measurable results."
+      },
+      {
+        "title": "Support for New Influencers",
+        "description": "We guide new creators in their positioning, content, personal brand and first collaborations to enter the market professionally."
+      },
+      {
+        "title": "Consulting for Junior Creators",
+        "description": "We advise on rates, brand negotiation, organic growth, content optimization and building a sustainable career within the digital ecosystem."
+      }
+    ]
+  },
+  "language": {
+    "switchTo": "Switch to",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "downloadButton": {
+    "downloadPortfolio": "Download portfolio"
+  },
+  "highlightSection": {
+    "title": "Convert digital presence into real positioning",
+    "description": "ISKRA is the strategic advertising agency and influence that converts digital presence into real positioning, through campaigns with creators based on criteria, professional negotiation and impeccable execution."
+  },
+  "howWeWorkSection": {
+    "title": "Our team",
+    "description": "Iskra is made up of a multidisciplinary team of professionals in strategy, creativity and campaign management. Each project is developed with specialists who are activated according to the objectives and needs of each brand.",
+    "points": [
+      "Multidisciplinary team activated according to each project",
+      "Strategic thinking before empty trends",
+      "Creativity with criteria, not improvisation"
+    ],
+    "additional": "This work model has been designed to ensure operational flexibility, efficiency in management and a high level of specialization in each phase of the projects.",
+    "supervision": "The strategic direction and direct supervision of the projects are personally assumed, with the objective of guaranteeing coherence, solidity and a constant orientation towards measurable results."
+  },
+  "stepsSection": {
+    "title": "How we work at Iskra?",
+    "subtitle": "We boost your brand step by step",
+    "steps": [
+      {
+        "title": "Diagnosis and objective definition",
+        "text": "In-depth analysis of needs, audiences and strategic opportunities."
+      },
+      {
+        "title": "Strategic design and creative concept",
+        "text": "Development of the unique narrative and value proposition for the campaign."
+      },
+      {
+        "title": "Influencer selection and curation",
+        "text": "Rigorous validation of profiles aligned with objectives and audiences."
+      },
+      {
+        "title": "Professional negotiation and contracting",
+        "text": "Expert advice on terms, scopes and contractual conditions."
+      },
+      {
+        "title": "Content production and publication",
+        "text": "Creative direction and guidelines for authentic and strategic content."
+      },
+      {
+        "title": "Impact measurement and optimization",
+        "text": "Analysis of results, actionable insights and continuous improvement."
+      },
+      {
+        "title": "Quality control and monitoring",
+        "text": "Continuous monitoring of performance and compliance with standards."
+      }
+    ]
+  },
+  "servicesPage": {
+    "title": "Services",
+    "services": [
+      {
+        "title": "Influencer Marketing Strategy",
+        "description": "We design strategies targeted at influencers, content creators and artists, aligned with each brand's commercial objectives, focused on impact, reach and real conversion."
+      },
+      {
+        "title": "Creative Strategy",
+        "description": "We are a company specialized in the development of creative strategies for brands, focused on designing and executing solutions that generate connection, positioning and measurable results. We work with companies of different sizes, accompanying them in the definition and evolution of their communication based on a deep understanding of their identity, objectives and audience. Our approach integrates narrative, content strategy and creative execution, aligning each action with the brand's DNA and the dynamics of the digital ecosystem. We believe in strategically applied creativity as a driver of value, impact and sustainable business growth."
+      },
+      {
+        "title": "Influencer Selection and Curation",
+        "description": "We analyze data, real engagement and brand affinity to select authentic profiles that connect with the right audience and generate measurable results."
+      },
+      {
+        "title": "Support for New Influencers",
+        "description": "We guide new creators in their positioning, content, personal brand and first collaborations to enter the market professionally."
+      },
+      {
+        "title": "Consulting for Junior Creators",
+        "description": "We advise on rates, brand negotiation, organic growth, content optimization and building a sustainable career within the digital ecosystem."
+      }
+    ]
+  },
+  "collaborationsPage": {
+    "title": "Real cases",
+    "description": "Talent and brands with which we have developed campaigns, strategies and growth processes within the digital ecosystem."
+  }
+}

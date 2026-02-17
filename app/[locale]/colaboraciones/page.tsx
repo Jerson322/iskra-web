@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import DownloadButton from "@/componets/DownloadButton";
+import { useTranslations } from "next-intl";
 
 /* =======================
     CARRUSEL INFINITO
@@ -37,6 +38,7 @@ function InfiniteCarousel({
 }
 
 export default function ColaboracionesPage() {
+  const t = useTranslations("collaborationsPage");
   const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -122,7 +124,7 @@ export default function ColaboracionesPage() {
           className="relative z-20 h-full flex items-center justify-center px-6"
         >
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-center">
-            Casos Reales
+            {t("title")}
           </h1>
         </motion.div>
       </section>
@@ -131,14 +133,13 @@ export default function ColaboracionesPage() {
           CONTENIDO
       ======================= */}
       <section className="max-w-7xl mx-auto px-6 py-32">
-  <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between mb-32">
-    <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
-      Talento y marcas con las que hemos desarrollado campañas, estrategias
-      y procesos de crecimiento dentro del ecosistema digital.
-    </p>
+        <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between mb-32">
+          <p className="text-white/70 max-w-2xl text-lg leading-relaxed">
+            {t("description")}
+          </p>
 
-    <DownloadButton />
-  </div>
+          <DownloadButton />
+        </div>
 
         {/* =======================
             CARRUSELES

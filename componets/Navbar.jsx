@@ -1,10 +1,11 @@
 "use client";
-
+import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { useChat } from "./ChatContext";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -12,6 +13,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations("navbar");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,12 +22,35 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [pathname]);
+
   const handleNavClick = (id) => {
-    if (pathname !== "/") {
-      router.push(`/#${id}`);
+    const homePath = `/${locale}`;
+
+    if (pathname !== homePath) {
+      router.push(`${homePath}#${id}`);
     } else {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const switchLocale = () => {
+    const newLocale = locale === "es" ? "en" : "es";
+
+    const segments = pathname.split("/");
+    segments[1] = newLocale; // reemplaza el locale
+
+    const newPath = segments.join("/");
+
+    router.push(newPath);
   };
 
   return (
@@ -117,13 +143,13 @@ export default function Navbar() {
             onClick={() => handleNavClick("inicio")}
             className="cursor-pointer hover:text-white transition"
           >
-            Inicio
+            {t("home")}
           </li>
           <li
             onClick={() => handleNavClick("por-que-elegirnos")}
             className="cursor-pointer hover:text-white transition"
           >
-            ¿Por qué elegirnos?
+            {t("whyChooseUs")}
           </li>
 
           <li
@@ -133,22 +159,22 @@ export default function Navbar() {
             }}
             className="cursor-pointer hover:opacity-80"
           >
-            Equipo
+            {t("team")}
           </li>
 
           <li
             onClick={() => handleNavClick("nuestro-metodo")}
             className="cursor-pointer hover:text-white transition"
           >
-            Nuestro método
+            {t("ourMethod")}
           </li>
 
           <li className="hover:text-white transition">
-            <Link href="/servicios">Servicios</Link>
+            <Link href={`/${locale}/servicios`}>{t("services")}</Link>
           </li>
 
           <li className="hover:text-white transition">
-            <Link href="/colaboraciones">Casos reales</Link>
+            <Link href={`/${locale}/colaboraciones`}>{t("caseStudies")}</Link>
           </li>
         </ul>
         {/* ☰ BOTÓN MOBILE */}
@@ -162,14 +188,23 @@ export default function Navbar() {
         </div>
 
         {/* BOTÓN */}
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 flex justify-end gap-4">
+          <button
+            onClick={switchLocale}
+            className="relative inline-flex rounded-full p-[2px] overflow-hidden group"
+          >
+            <span className="absolute inset-0 rounded-full spark-border" />
+            <span className="relative z-10 rounded-full bg-black/80 px-4 py-2 text-sm text-white font-medium tracking-wide hover:bg-white hover:text-black transition">
+              {locale.toUpperCase()}
+            </span>
+          </button>
           <button
             onClick={() => setOpen(true)}
             className="relative inline-flex rounded-full p-[2px] overflow-hidden group"
           >
             <span className="absolute inset-0 rounded-full spark-border" />
             <span className="relative z-10 rounded-full bg-black/80 px-6 py-2 text-sm text-white font-medium tracking-wide hover:bg-white hover:text-black transition">
-              Cotizar
+              {t("quote")}
             </span>
           </button>
         </div>
@@ -185,7 +220,7 @@ export default function Navbar() {
               }}
               className="cursor-pointer hover:opacity-80"
             >
-              Inicio
+              {t("home")}
             </p>
 
             <p
@@ -195,7 +230,7 @@ export default function Navbar() {
               }}
               className="cursor-pointer hover:opacity-80"
             >
-              ¿Por qué elegirnos?
+              {t("whyChooseUs")}
             </p>
 
             <p
@@ -205,7 +240,7 @@ export default function Navbar() {
               }}
               className="cursor-pointer hover:opacity-80"
             >
-              Equipo
+              {t("team")}
             </p>
 
             <p
@@ -215,24 +250,35 @@ export default function Navbar() {
               }}
               className="cursor-pointer hover:opacity-80"
             >
-              Nuestro método
+              {t("ourMethod")}
             </p>
 
             <Link
-              href="/servicios"
+              href={`/${locale}/servicios`}
               onClick={() => setMenuOpen(false)}
               className="block hover:opacity-80"
             >
-              Servicios
+              {t("services")}
             </Link>
 
             <Link
-              href="/colaboraciones"
+              href={`/${locale}/colaboraciones`}
               onClick={() => setMenuOpen(false)}
               className="block hover:opacity-80"
             >
-              Casos reales
+              {t("caseStudies")}
             </Link>
+
+            <button
+              onClick={() => {
+                switchLocale();
+                setMenuOpen(false);
+              }}
+              className="block hover:opacity-80 text-left"
+            >
+              {t("language.switchTo")}{" "}
+              {locale === "es" ? t("language.english") : t("language.spanish")}
+            </button>
           </div>
         </div>
       )}

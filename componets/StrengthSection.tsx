@@ -1,6 +1,9 @@
 import ScrollReveal from "./ScrollReveal";
+import { useTranslations } from "next-intl";
 
 export default function StrengthSection() {
+  const t = useTranslations("strengthSection");
+
   return (
     <section id="por-que-elegirnos" className="bg-zinc-50 py-32">
       <div className="max-w-6xl mx-auto px-6">
@@ -8,16 +11,15 @@ export default function StrengthSection() {
         <ScrollReveal>
           <div className="text-center mb-20">
             <span className="text-sm uppercase tracking-widest text-gray-400">
-              Diferencial Iskra
+              {t("differential")}
             </span>
 
             <h2 className="mt-4 text-4xl md:text-5xl font-bold">
-              Nuestra verdadera fortaleza
+              {t("title")}
             </h2>
 
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-              Estrategias de marketing con personas influyentes seleccionadas
-              cuidadosamente.
+              {t("subtitle")}
             </p>
           </div>
         </ScrollReveal>
@@ -30,13 +32,10 @@ export default function StrengthSection() {
                 01
               </div>
 
-              <h3 className="text-xl font-semibold mb-2">
-                No vendemos influencers
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{t("card1.title")}</h3>
 
               <p className="text-gray-600 text-sm leading-relaxed">
-                ISKRA diseña estrategias con personas influyentes seleccionadas
-                cuidadosamente.
+                {t("card1.description")}
               </p>
             </div>
           </ScrollReveal>
@@ -47,13 +46,10 @@ export default function StrengthSection() {
                 02
               </div>
 
-              <h3 className="text-xl font-semibold mb-2">
-                Criterio estratégico
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{t("card2.title")}</h3>
 
               <p className="text-gray-600 text-sm leading-relaxed">
-                Nuestro diferencial: análisis profundo, ética y visión de largo
-                plazo.
+                {t("card2.description")}
               </p>
             </div>
           </ScrollReveal>
@@ -64,13 +60,10 @@ export default function StrengthSection() {
                 03
               </div>
 
-              <h3 className="text-xl font-semibold mb-2">
-                Estrategias integrales
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">{t("card3.title")}</h3>
 
               <p className="text-gray-600 text-sm leading-relaxed">
-                Conectamos marcas con personas influyentes de forma ética y
-                sostenible.
+                {t("card3.description")}
               </p>
             </div>
           </ScrollReveal>
@@ -81,14 +74,12 @@ export default function StrengthSection() {
               💰
             </div>
 
-            <h3 className="text-2xl font-semibold mb-4">Precios justos</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              {t("pricing.title")}
+            </h3>
 
             <p className="text-gray-700 text-base leading-relaxed max-w-4xl mx-auto">
-              Trabajamos con tarifas transparentes que cuidan tanto a la marca
-              como al creador. Queremos relaciones sostenibles donde todos
-              ganen: marcas reciben valor real y los influencers son justamente
-              reconocidos por su trabajo. Sin sorpresas ni costos ocultos, todo
-              claro desde el inicio.
+              {t("pricing.description")}
             </p>
           </div>
         </ScrollReveal>

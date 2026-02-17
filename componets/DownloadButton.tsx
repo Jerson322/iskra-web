@@ -3,11 +3,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Check, ArrowDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type State = "idle" | "loading" | "done";
 
 export default function DownloadButton() {
   const [state, setState] = useState<State>("idle");
+  const t = useTranslations("downloadButton");
 
   const handleClick = () => {
     if (state !== "idle") return;
@@ -64,7 +66,7 @@ export default function DownloadButton() {
             transition={{ duration: 0.25 }}
           >
             <ArrowDown size={16} />
-            Descargar portafolio
+            {t("downloadPortfolio")}
           </motion.span>
         )}
 

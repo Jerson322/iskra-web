@@ -2,11 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 interface Service {
@@ -14,12 +10,65 @@ interface Service {
   description: string;
 }
 
+/* =========================
+   COMPONENTE EXPANDIBLE
+========================= */
+function ExpandableText({
+  text,
+  collapsedHeight = 96,
+}: {
+  text: string;
+  collapsedHeight?: number;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const [needsToggle, setNeedsToggle] = useState(false);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    const fullHeight = el.scrollHeight;
+    setContentHeight(fullHeight);
+
+    if (fullHeight > collapsedHeight) {
+      setNeedsToggle(true);
+    } else {
+      setNeedsToggle(false);
+    }
+  }, [text, collapsedHeight]);
+
+  return (
+    <div>
+      <motion.div
+        animate={{ height: expanded ? contentHeight : collapsedHeight }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
+      >
+        <div ref={contentRef} className="text-white/70 leading-relaxed">
+          {text}
+        </div>
+      </motion.div>
+
+      {needsToggle && (
+        <button
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-4 text-sm text-purple-400 hover:text-purple-300 transition"
+        >
+          {expanded ? "Ver menos" : "Ver más"}
+        </button>
+      )}
+    </div>
+  );
+}
+
+
 export default function ServiciosPage() {
   const t = useTranslations("servicesPage");
   const heroRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [expanded, setExpanded] = useState<number | null>(null);
-
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -39,17 +88,19 @@ export default function ServiciosPage() {
   const imageY = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["0%", "0%"] : ["0%", "60%"],
+    isMobile ? ["0%", "0%"] : ["0%", "60%"]
   );
+
   const imageScale = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? [1, 1] : [1, 1.1],
+    isMobile ? [1, 1] : [1, 1.1]
   );
+
   const imageBlur = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(4px)"],
+    isMobile ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(4px)"]
   );
 
   const titleY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
@@ -64,7 +115,6 @@ export default function ServiciosPage() {
         ref={heroRef}
         className="relative h-[120vh] w-full overflow-hidden"
       >
-        {/* Imagen */}
         <motion.div
           style={{
             y: imageY,
@@ -75,7 +125,7 @@ export default function ServiciosPage() {
           className="absolute inset-0"
         >
           <Image
-            src="/images/servicios.png" // cambia la imagen si quieres
+            src="/images/servicios.png"
             alt="Servicios Iskra"
             fill
             priority
@@ -83,15 +133,12 @@ export default function ServiciosPage() {
           />
         </motion.div>
 
-        {/* Overlay oscuro */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black z-10" />
 
-        {/* Glow marketing */}
         <div className="absolute inset-0 z-10 pointer-events-none">
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-600/20 blur-[120px]" />
         </div>
 
-        {/* Título */}
         <motion.div
           style={{ y: titleY, opacity: titleOpacity }}
           className="relative z-20 h-full flex items-center justify-center px-6"
@@ -101,7 +148,8 @@ export default function ServiciosPage() {
           </h1>
         </motion.div>
       </section>
-{/* =======================
+
+    {/* =======================
     SERVICIOS
 ======================= */}
 <section className="max-w-6xl mx-auto px-6 py-32 space-y-32">
@@ -115,44 +163,22 @@ export default function ServiciosPage() {
     </h2>
 
     <div className="grid md:grid-cols-2 gap-8">
-      {(t.raw("national") as Service[]).map((service, i) => {
-        const isOpen = expanded === i;
+      {(t.raw("national") as Service[]).map((service, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: i * 0.1 }}
+          className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 backdrop-blur-sm"
+        >
+          <h3 className="text-xl font-medium mb-4">
+            {service.title}
+          </h3>
 
-        return (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 backdrop-blur-sm"
-          >
-            <h3 className="text-xl font-medium mb-4">
-              {service.title}
-            </h3>
-
-            <motion.div
-              initial={false}
-              animate={{ height: isOpen ? "auto" : 90 }}
-              transition={{ duration: 0.4 }}
-              className="overflow-hidden"
-            >
-              <p className="text-white/70 leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
-
-            {service.description.length > 180 && (
-              <button
-                onClick={() => setExpanded(isOpen ? null : i)}
-                className="mt-4 text-sm text-purple-400 hover:text-purple-300 transition"
-              >
-                {isOpen ? "Ver menos" : "Ver más"}
-              </button>
-            )}
-          </motion.div>
-        );
-      })}
+          <ExpandableText text={service.description} />
+        </motion.div>
+      ))}
     </div>
   </div>
 
@@ -170,47 +196,25 @@ export default function ServiciosPage() {
     </p>
 
     <div className="grid md:grid-cols-3 gap-8">
-      {(t.raw("international") as Service[]).map((service, i) => {
-        const index = 100 + i; // evita conflicto con nacionales
-        const isOpen = expanded === index;
+      {(t.raw("international") as Service[]).map((service, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: i * 0.1 }}
+          className="p-8 rounded-2xl bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/20 hover:border-purple-400 transition-all duration-500"
+        >
+          <h3 className="text-xl font-medium mb-4 text-purple-400">
+            {service.title}
+          </h3>
 
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-purple-600/10 to-pink-600/10 border border-purple-500/20 hover:border-purple-400 transition-all duration-500"
-          >
-            <h3 className="text-xl font-medium mb-4 text-purple-400">
-              {service.title}
-            </h3>
-
-            <motion.div
-              initial={false}
-              animate={{ height: isOpen ? "auto" : 90 }}
-              transition={{ duration: 0.4 }}
-              className="overflow-hidden"
-            >
-              <p className="text-white/70 leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
-
-            {service.description.length > 160 && (
-              <button
-                onClick={() => setExpanded(isOpen ? null : index)}
-                className="mt-4 text-sm text-purple-300 hover:text-purple-200 transition"
-              >
-                {isOpen ? "Ver menos" : "Ver más"}
-              </button>
-            )}
-          </motion.div>
-        );
-      })}
+          <ExpandableText text={service.description} />
+        </motion.div>
+      ))}
     </div>
   </div>
+
 </section>
     </main>
   );

@@ -269,16 +269,6 @@ export default function Navbar() {
               {t("caseStudies")}
             </Link>
 
-            <button
-              onClick={() => {
-                switchLocale();
-                setMenuOpen(false);
-              }}
-              className="block hover:opacity-80 text-left"
-            >
-              {t("language.switchTo")}{" "}
-              {locale === "es" ? t("language.english") : t("language.spanish")}
-            </button>
           </div>
         </div>
       )}

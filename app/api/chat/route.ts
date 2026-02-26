@@ -22,14 +22,28 @@ export async function POST(req: Request) {
       temperature: 0.6,
     });
 
+    // 🔥 PROTECCIÓN CLAVE
+    if (!completion?.choices?.[0]?.message) {
+      return NextResponse.json(
+        { error: "Invalid AI response" },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       message: completion.choices[0].message,
     });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json(
-      { error: "Chat error" },
-      { status: 500 }
-    );
-  }
+
+  }  catch (error: unknown) {
+  console.error("OpenAI error:", error);
+
+  const message =
+    error instanceof Error ? error.message : "Chat error";
+
+  return NextResponse.json(
+    { error: message },
+    { status: 500 }
+  );
+}
+
 }

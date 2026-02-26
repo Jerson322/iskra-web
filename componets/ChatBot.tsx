@@ -207,6 +207,33 @@ Base de datos influencers que maneja iskra:
       "Reel en colab": 1900000,
       "TikTok": 2500000,
       "Ráfaga": 990000
+      }
+
+    "nombre": "Masani",
+    "tipo": "Fotografía",
+    "servicios": {
+      "10 fotografías, 2 spots, 2 vestuarios": 9000000,
+      "15 fotografías, 3 sports, 3 vestuarios": 14000000,
+      "20 fotografías, 4 spots, 4 vestuarios ": 16000000,
+      "Historia ": 280000,
+      "Ráfaga (3 hsitorias)": 650000,
+      "Reel ": 1050000,
+      "Reel en Colaboración ": 1450000,
+      "Tik Tok ": 2300000
+      }
+
+    "nombre": "Camilo Montoya",
+    "tipo": "Fotografía",
+    "servicios": {
+      "1Sesión 10 fotografía ": 1000000
+      }
+
+      "nombre": "Silvia Corzo",
+    "tipo": "Presentadora",
+    "servicios": {
+      "Evento ": 12000000
+      }
+      
 
 
 FLUJO:

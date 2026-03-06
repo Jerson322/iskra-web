@@ -1,25 +1,12 @@
-# TODO: Replace hardcoded text with useTranslations
+# TODO - Nueva Sección Capacidades
 
-## 1. Update translation files ✅
+## Pasos completados:
 
-- Add missing keys to messages/en.json and messages/es.json for all components
+- [x] 1. Analizar estructura del proyecto y confirmar plan con el usuario
+- [x] 2. Actualizar messages/es.json - agregar traducciones de navbar y capacidadesSection
+- [x] 3. Actualizar messages/en.json - agregar traducciones de navbar y capacidadesSection
+- [x] 4. Actualizar Navbar.jsx - agregar nuevo item de navegación (desktop y mobile)
+- [x] 5. Crear componente Capacidades.tsx con contenido
+- [x] 6. Actualizar page.tsx - importar y agregar el componente
 
-## 2. Update components
-
-- Navbar.jsx: Replace hardcoded strings with t() calls ✅
-- Hero.jsx: Add useTranslations and replace text ✅
-- Footer.tsx: Add useTranslations and replace text ✅
-- HighlightSection.tsx: Add useTranslations and replace text ✅
-- HowWeWorkSection.tsx: Add useTranslations and replace text ✅
-- StepsSection.tsx: Add useTranslations and replace text ✅
-- StrengthSection.tsx: Ensure all text uses translations ✅
-- DownloadButton.tsx: Add useTranslations and replace text ✅
-
-## 3. Update pages
-
-- servicios/page.tsx: Add useTranslations and replace text ✅
-- colaboraciones/page.tsx: Add useTranslations and replace text ✅
-
-## 4. Test ✅
-
-- Run the app and check language switching
+## Estado: Completado ✅

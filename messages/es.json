@@ -9,6 +9,7 @@
   },
   "navbar": {
     "home": "Inicio",
+    "capabilities": "Capacidades",
     "whyChooseUs": "¿Por qué elegirnos?",
     "team": "Equipo",
     "ourMethod": "Nuestro método",
@@ -17,7 +18,6 @@
     "quote": "Cotizar",
     "followUs": "Síguenos",
     "copyright": "© 2024 Iskra. Todos los derechos reservados."
-
   },
   "hero": {
     "title1": "Agencia de publicidad enfocada en",
@@ -51,7 +51,7 @@
       "description": "Trabajamos con tarifas transparentes que cuidan tanto a la marca como al creador. Queremos relaciones sostenibles donde todos ganen: marcas reciben valor real y los influencers son justamente reconocidos por su trabajo. Sin sorpresas ni costos ocultos, todo claro desde el inicio."
     }
   },
- 
+
   "language": {
     "switchTo": "Cambiar a",
     "english": "Inglés",
@@ -63,6 +63,28 @@
   "highlightSection": {
     "title": "Convertimos presencia digital en posicionamiento real",
     "description": "ISKRA es la agencia estratégica de publicidad e influencia que convierte la presencia digital en posicionamiento real, mediante campañas con creadores basadas en criterio, negociación profesional y ejecución impecable."
+  },
+  "capacidadesSection": {
+    "title": "Nuestras Capacidades",
+    "subtitle": "Lo que hacemos por tu marca",
+    "cards": [
+      {
+        "title": "Estrategia de Marca",
+        "description": "Desarrollamos estrategias integrales de posicionamiento y comunicación que conectan tu marca con su audiencia objetivo."
+      },
+      {
+        "title": "Marketing de Influencia",
+        "description": "Creamos campañas con influencers seleccionados cuidadosamente para generar impacto real y medible en tu público."
+      },
+      {
+        "title": "Producción de Contenido",
+        "description": "Generamos contenido audiovisual y digital de alta calidad adaptado a las necesidades de cada plataforma."
+      },
+      {
+        "title": "Gestión de Relaciones",
+        "description": "Negociamos y gestionamos relaciones con creadores y talentos para asegurar colaboraciones exitosas."
+      }
+    ]
   },
   "howWeWorkSection": {
     "title": "Nuestro equipo",
@@ -110,48 +132,48 @@
     ]
   },
   "servicesPage": {
-  "title": "Servicios",
-  "nationalTitle": "Servicios",
-  "internationalTitle": "Servicios Internacionales",
+    "title": "Servicios",
+    "nationalTitle": "Servicios",
+    "internationalTitle": "Servicios Internacionales",
 
-  "national": [
-    {
-      "title": "Estrategia de Influencer Marketing",
-      "description": "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real."
-    },
-    {
-      "title": "Estrategia creativa",
-      "description": "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio."
-    },
-    {
-      "title": "Selección y Curaduría de Influencers",
-      "description": "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles."
-    },
-    {
-      "title": "Acompañamiento para Nuevos Influencers",
-      "description": "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional."
-    },
-    {
-      "title": "Consultoría para Creadores Junior",
-      "description": "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital."
-    }
-  ],
+    "national": [
+      {
+        "title": "Estrategia de Influencer Marketing",
+        "description": "Diseñamos estrategias dirigidas a influencers, creadores de contenido y artistas, alineadas con los objetivos comerciales de cada marca, enfocadas en impacto, alcance y conversión real."
+      },
+      {
+        "title": "Estrategia creativa",
+        "description": "Somos una empresa especializada en el desarrollo de estrategias creativas para marcas, enfocada en diseñar y ejecutar soluciones que generen conexión, posicionamiento y resultados medibles. Trabajamos con empresas de distintos tamaños, acompañándolas en la definición y evolución de su comunicación a partir de un entendimiento profundo de su identidad, objetivos y audiencia. Nuestro enfoque integra narrativa, estrategia de contenido y ejecución creativa, alineando cada acción con el ADN de la marca y las dinámicas del ecosistema digital. Creemos en la creatividad aplicada estratégicamente como motor de valor, impacto y crecimiento sostenible para el negocio."
+      },
+      {
+        "title": "Selección y Curaduría de Influencers",
+        "description": "Analizamos data, engagement real y afinidad de marca para seleccionar perfiles auténticos que conecten con la audiencia correcta y generen resultados medibles."
+      },
+      {
+        "title": "Acompañamiento para Nuevos Influencers",
+        "description": "Guiamos a nuevos creadores en su posicionamiento, contenido, marca personal y primeras colaboraciones para que entren al mercado de forma profesional."
+      },
+      {
+        "title": "Consultoría para Creadores Junior",
+        "description": "Asesoramos en tarifas, negociación con marcas, crecimiento orgánico, optimización de contenido y construcción de una carrera sostenible dentro del ecosistema digital."
+      }
+    ],
 
-  "international": [
-    {
-      "title": "Gestión de influencers para marcas que quieren entrar a LATAM",
-      "description": "Acompañamos a marcas internacionales en su proceso de entrada al mercado latinoamericano a través de estrategias de marketing con influencers diseñadas para cada país. Nos encargamos de la selección estratégica de creadores, posicionamiento de marca, desarrollo de contenido, activaciones digitales y ejecución integral de campaña. Nuestro enfoque combina conocimiento cultural local con planificación estratégica para asegurar una conexión real con las audiencias."
-    },
-    {
-      "title": "Campañas transatlánticas (Europa – Latinoamérica)",
-      "description": "Conectamos marcas internacionales con creadores de contenido en Colombia y Latinoamérica para desarrollar campañas con alcance regional. Diseñamos la estrategia de contenido, gestionamos negociaciones y coordinamos la ejecución completa, garantizando coherencia entre mercados. Trabajamos con perfiles cuidadosamente seleccionados que permiten llegar a nichos específicos y audiencias en crecimiento, evitando la saturación de públicos tradicionales."
-    },
-    {
-      "title": "Activaciones híbridas Europa–Latinoamérica",
-      "description": "Diseñamos activaciones que combinan experiencias presenciales y digitales entre Europa y Latinoamérica. Desde lanzamientos de marca hasta eventos estratégicos amplificados por creadores de contenido en ambos mercados, estructuramos campañas que integran experiencia, visibilidad e influencia. Nos encargamos de la planificación, coordinación internacional y ejecución, asegurando alineación estratégica y resultados medibles."
-    }
-  ]
-},
+    "international": [
+      {
+        "title": "Gestión de influencers para marcas que quieren entrar a LATAM",
+        "description": "Acompañamos a marcas internacionales en su proceso de entrada al mercado latinoamericano a través de estrategias de marketing con influencers diseñadas para cada país. Nos encargamos de la selección estratégica de creadores, posicionamiento de marca, desarrollo de contenido, activaciones digitales y ejecución integral de campaña. Nuestro enfoque combina conocimiento cultural local con planificación estratégica para asegurar una conexión real con las audiencias."
+      },
+      {
+        "title": "Campañas transatlánticas (Europa – Latinoamérica)",
+        "description": "Conectamos marcas internacionales con creadores de contenido en Colombia y Latinoamérica para desarrollar campañas con alcance regional. Diseñamos la estrategia de contenido, gestionamos negociaciones y coordinamos la ejecución completa, garantizando coherencia entre mercados. Trabajamos con perfiles cuidadosamente seleccionados que permiten llegar a nichos específicos y audiencias en crecimiento, evitando la saturación de públicos tradicionales."
+      },
+      {
+        "title": "Activaciones híbridas Europa–Latinoamérica",
+        "description": "Diseñamos activaciones que combinan experiencias presenciales y digitales entre Europa y Latinoamérica. Desde lanzamientos de marca hasta eventos estratégicos amplificados por creadores de contenido en ambos mercados, estructuramos campañas que integran experiencia, visibilidad e influencia. Nos encargamos de la planificación, coordinación internacional y ejecución, asegurando alineación estratégica y resultados medibles."
+      }
+    ]
+  },
   "collaborationsPage": {
     "title": "Casos reales",
     "description": "Talento y marcas con las que hemos desarrollado campañas, estrategias y procesos de crecimiento dentro del ecosistema digital."

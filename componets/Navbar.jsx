@@ -119,14 +119,14 @@ export default function Navbar() {
       <nav className="relative z-10 max-w-7xl mx-auto px-6 py-2 flex items-center min-h-[64px]">
         {/* LOGO */}
         <div className="flex-1">
-          <Link href="/">
+          <Link href={`/${locale}`}>
             <Image
               src="/images/iskra-logo.png"
               alt="ISKRA"
-              width={130}
-              height={42}
+              width={140}
+              height={45}
               priority
-              className="object-contain cursor-pointer"
+              className="object-contain cursor-pointer ml-2"
             />
           </Link>
         </div>
@@ -134,7 +134,7 @@ export default function Navbar() {
         {/* MENÚ */}
         <ul
           className="
-    hidden md:flex gap-12
+    hidden md:flex gap-8
     text-white font-semibold text-[15px] tracking-wide
     drop-shadow-[0_3px_8px_rgba(0,0,0,1)]
   "
@@ -144,6 +144,9 @@ export default function Navbar() {
             className="cursor-pointer hover:text-white transition"
           >
             {t("home")}
+          </li>
+          <li className="hover:text-white transition">
+            <Link href={`/${locale}/capacidades`}>{t("capabilities")}</Link>
           </li>
           <li
             onClick={() => handleNavClick("por-que-elegirnos")}
@@ -223,6 +226,14 @@ export default function Navbar() {
               {t("home")}
             </p>
 
+            <Link
+              href={`/${locale}/capacidades`}
+              onClick={() => setMenuOpen(false)}
+              className="block hover:opacity-80"
+            >
+              {t("capabilities")}
+            </Link>
+
             <p
               onClick={() => {
                 handleNavClick("por-que-elegirnos");
@@ -268,7 +279,6 @@ export default function Navbar() {
             >
               {t("caseStudies")}
             </Link>
-
           </div>
         </div>
       )}

@@ -177,5 +177,71 @@
   "collaborationsPage": {
     "title": "Real cases",
     "description": "Talent and brands with which we have developed campaigns, strategies and growth processes within the digital ecosystem."
+  },
+  "capacidadesPage": {
+    "hero": {
+      "companyName": "OMNICOM",
+      "before": "The world's leading",
+      "highlight1": "marketing",
+      "middle": "and",
+      "highlight2": "sales",
+      "after": "company",
+      "tagline": "Built for intelligent growth in the next era.",
+      "description": "We help the world's leading brands solve their most critical growth challenges by giving them access to industry-leading insights, breakthrough technology, and the most creative talent in the business."
+    },
+    "connectedCapabilities": {
+      "pill": "Connected Capabilities",
+      "title": "A competitive edge across every dimension",
+      "description": "Our connected capabilities give brands a measurable advantage in the modern world of marketing and sales.",
+      "buttonText": "Connected\nCapabilities",
+      "items": [
+        "Advertising",
+        "Branding",
+        "Commerce",
+        "Experiential",
+        "Health",
+        "Media",
+        "Precision Marketing",
+        "Production",
+        "Public\nRelations"
+      ]
+    },
+    "omni": {
+      "pill": "Omni",
+      "title": "Omnicom's AI-driven marketing intelligence platform",
+      "description": "Omni unites creativity, media, data, and AI to help brands grow with greater clarity, speed, and measurable impact in the age of influence.",
+      "cards": [
+        { "title": "Central Orchestration", "body": "One unified workflow." },
+        { "title": "AI-Native Production", "body": "Content at an unmatched scale." },
+        { "title": "Predictive Intelligence", "body": "Helping you see what's next." },
+        { "title": "Intelligence-Infused Data", "body": "A single source of truth. Infinite clarity." },
+        { "title": "Outcome-Based Media Buying", "body": "ROI you can prove, not just promise." },
+        { "title": "Geo Optimization", "body": "Global scale. Local precision." }
+      ]
+    },
+    "investors": {
+      "pill": "Investors",
+      "title": "A record of sustained growth",
+      "description": "Omnicom (NYSE: OMC) sets the standard for marketing and sales leadership by consistently building stronger brands and delivering superior outcomes.",
+      "buttonText": "Investors"
+    },
+    "whatsNew": {
+      "title": "What's new across Omnicom",
+      "viewAll": "View All",
+      "articles": [
+        {
+          "date": "March 5, 2026",
+          "title": "Omnicom Production's Sergio Lopez on building a unified production engine for APAC's next phase of growth"
+        },
+        {
+          "date": "March 4, 2026",
+          "title": "Zefr and OM Media Trials Release First-of-Its-Kind Study on Brand Impact of Ad Adjacency to AI-Generated Content"
+        },
+        {
+          "date": "February 25, 2026",
+          "title": "Omnicom Prices Senior Notes Offerings"
+        }
+      ]
+    }
   }
 }

@@ -5,25 +5,30 @@ import { useState, useEffect, useRef, useCallback } from "react";
 type AnimationPhase = "pending" | "video" | "fade-out" | "complete";
 
 function IntroAnimation() {
-  const [phase, setPhase] = useState<AnimationPhase>("pending");
+  const [phase, setPhase] = useState<AnimationPhase>(() => {
+    if (typeof window === "undefined") return "pending";
+    const seen = sessionStorage.getItem("introSeen");
+    if (seen) return "complete";
+    const reduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (reduced) {
+      sessionStorage.setItem("introSeen", "1");
+      return "complete";
+    }
+    return "video";
+  });
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (sessionStorage.getItem("introSeen")) {
-      setPhase("complete");
-      return;
-    }
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setPhase("complete");
-      sessionStorage.setItem("introSeen", "1");
-      return;
-    }
-    setPhase("video");
+    // Lógica de inicialización movida a useState para evitar setState síncrono
+    console.log("Phase init handled in useState, current phase:", phase);
   }, []);
 
   useEffect(() => {
     if (phase === "video" && videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      console.log("Play video");
+      videoRef.current.play().catch((e) => console.error("Play error:", e));
     }
   }, [phase]);
 
@@ -79,6 +84,7 @@ import { useTranslations } from "next-intl";
 import topSectionAnimation from "../../../public/animaciones/initial.json";
 import orangeCircleLottie from "../../../public/animaciones/circle.json";
 import investorsLottie from "../../../public/animaciones/investors.json";
+import type { LottieRefCurrentProps } from "lottie-react";
 
 // Lottie necesita cargarse dinámicamente en Next.js para evitar errores de Client-Side mismatch o problemas con el objeto window
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -92,7 +98,7 @@ function OrbitAnimation({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const lottieRef = useRef<any>(null);
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const bordersRef = useRef<(HTMLDivElement | null)[]>([]);
   const isHovered = useRef(false);
 
@@ -726,13 +732,19 @@ function NewsCarousel() {
 }
 
 export default function CapacidadesPage() {
-  const [isMobile, setIsMobile] = useState(false);
+  const getInitialIsMobile = () => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(max-width: 1023px)").matches;
+    }
+    return false;
+  };
+
+  const [isMobile, setIsMobile] = useState(getInitialIsMobile());
   const t = useTranslations("capacidadesPage");
   const capabilities = t.raw("connectedCapabilities.items") as string[];
 
   useEffect(() => {
     const mql = window.matchMedia("(max-width: 1023px)");
-    setIsMobile(mql.matches);
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mql.addEventListener("change", handler);
     return () => mql.removeEventListener("change", handler);
@@ -830,7 +842,7 @@ export default function CapacidadesPage() {
         <div
           className="absolute top-0 -right-1/4 sm:-right-1/6 w-full md:w-full h-screen pointer-events-none flex items-center justify-center z-10 translate-x-[25%] translate-y-[15%] sm:translate-x-[50%] sm:translate-y-[15%] md:-translate-x-[19%] md:translate-y-[15%] lg:translate-x-[15%] lg:translate-y-[0%] xl:translate-y-[15%]"
           style={{
-            filter: 'blur(var(--lottie-blur, 8px))',
+            filter: "blur(var(--lottie-blur, 8px))",
           }}
         >
           <Lottie

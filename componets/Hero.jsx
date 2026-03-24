@@ -80,7 +80,7 @@ export default function Hero() {
         "
       >
         <div className="max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] font-black tracking-tighter leading-none font-['Arial_Black',sans-serif]">
             {t("title1")}
             <span className="block mt-2">{t("title2")}</span>
           </h1>

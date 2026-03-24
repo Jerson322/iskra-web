@@ -14,7 +14,7 @@ export default function StrengthSection() {
               {t("differential")}
             </span>
 
-            <h2 className="mt-4 text-4xl md:text-5xl font-bold">
+            <h2 className="mt-4 text-4xl md:text-5xl font-bold text-black">
               {t("title")}
             </h2>
 

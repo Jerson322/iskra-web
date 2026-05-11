@@ -180,7 +180,7 @@
   },
   "capacidadesPage": {
     "hero": {
-      "companyName": "OMNICOM",
+      "companyName": "ISKRA",
       "before": "The world's leading",
       "highlight1": "marketing",
       "middle": "and",
@@ -208,7 +208,7 @@
     },
     "omni": {
       "pill": "Omni",
-      "title": "Omnicom's AI-driven marketing intelligence platform",
+      "title": "ISKRA's AI-driven marketing intelligence platform",
       "description": "Omni unites creativity, media, data, and AI to help brands grow with greater clarity, speed, and measurable impact in the age of influence.",
       "cards": [
         { "title": "Central Orchestration", "body": "One unified workflow." },
@@ -222,16 +222,16 @@
     "investors": {
       "pill": "Investors",
       "title": "A record of sustained growth",
-      "description": "Omnicom (NYSE: OMC) sets the standard for marketing and sales leadership by consistently building stronger brands and delivering superior outcomes.",
+      "description": "ISKRA (NYSE: OMC) sets the standard for marketing and sales leadership by consistently building stronger brands and delivering superior outcomes.",
       "buttonText": "Investors"
     },
     "whatsNew": {
-      "title": "What's new across Omnicom",
+      "title": "What's new across ISKRA",
       "viewAll": "View All",
       "articles": [
         {
           "date": "March 5, 2026",
-          "title": "Omnicom Production's Sergio Lopez on building a unified production engine for APAC's next phase of growth"
+          "title": "ISKRA Production's Sergio Lopez on building a unified production engine for APAC's next phase of growth"
         },
         {
           "date": "March 4, 2026",
@@ -239,7 +239,7 @@
         },
         {
           "date": "February 25, 2026",
-          "title": "Omnicom Prices Senior Notes Offerings"
+          "title": "ISKRA Prices Senior Notes Offerings"
         }
       ]
     }

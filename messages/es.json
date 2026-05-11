@@ -180,7 +180,7 @@
   },
   "capacidadesPage": {
     "hero": {
-      "companyName": "OMNICOM",
+      "companyName": "ISKRA",
       "before": "La empresa líder mundial en",
       "highlight1": "marketing",
       "middle": "y",
@@ -208,7 +208,7 @@
     },
     "omni": {
       "pill": "Omni",
-      "title": "La plataforma de inteligencia de marketing impulsada por IA de Omnicom",
+      "title": "La plataforma de inteligencia de marketing impulsada por IA de ISKRA",
       "description": "Omni integra creatividad, medios, datos e inteligencia artificial para impulsar el crecimiento de las marcas con mayor claridad, velocidad e impacto medible en la era de la influencia.",
       "cards": [
         { "title": "Orquestación Central", "body": "Un flujo de trabajo unificado." },
@@ -222,16 +222,16 @@
     "investors": {
       "pill": "Inversionistas",
       "title": "Un historial de crecimiento sostenido",
-      "description": "Omnicom (NYSE: OMC) establece el estándar en liderazgo de marketing y ventas, construyendo marcas más fuertes de manera consistente y entregando resultados superiores.",
+      "description": "ISKRA (NYSE: OMC) establece el estándar en liderazgo de marketing y ventas, construyendo marcas más fuertes de manera consistente y entregando resultados superiores.",
       "buttonText": "Inversionistas"
     },
     "whatsNew": {
-      "title": "Novedades en Omnicom",
+      "title": "Novedades en ISKRA",
       "viewAll": "Ver todo",
       "articles": [
         {
           "date": "5 de marzo de 2026",
-          "title": "Sergio Lopez de Omnicom Production habla sobre la construcción de un motor de producción unificado para la próxima fase de crecimiento en APAC"
+          "title": "Sergio Lopez de ISKRA Production habla sobre la construcción de un motor de producción unificado para la próxima fase de crecimiento en APAC"
         },
         {
           "date": "4 de marzo de 2026",
@@ -239,7 +239,7 @@
         },
         {
           "date": "25 de febrero de 2026",
-          "title": "Omnicom fija precios en sus ofertas de notas senior"
+          "title": "ISKRA fija precios en sus ofertas de notas senior"
         }
       ]
     }

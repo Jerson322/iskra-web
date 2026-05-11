@@ -891,7 +891,7 @@ export default function CapacidadesPage() {
             <OrbitAnimation items={capabilities} isMobile={isMobile} />
           </div>
 
-          {/* Right Column: Text Content Replicating Omnicom */}
+          {/* Right Column: Text Content Replicating ISKRA */}
           <div className="w-full flex flex-col items-start justify-center gap-4 md:gap-6 relative z-20 pl-6 sm:pl-10 md:pl-16 lg:pl-[15%] lg:max-w-[80%]">
             {/* Label Wrapper (Pill)  */}
             <div className="relative inline-flex items-center justify-start z-10 gap-2 px-4 py-2 mb-2 pr-16 md:pr-24">
